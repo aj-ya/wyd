@@ -10,9 +10,7 @@ const NameTag = () => {
             fontSize={'1em'}
             display={'inline-flex'}
             paddingStart="0.5"
-            width={['60px', '300px', '300px']}
             alignItems={'start'}
-            height="22px"
         >
             <Box fontWeight={'600'} display={'inline-flex'}>
                 <Box display={displayConfig}>[</Box>
