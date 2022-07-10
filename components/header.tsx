@@ -42,6 +42,10 @@ const Header = () => {
                 </HStack>
                 <HStack display={{ md: 'none', lg: 'none' }}>
                     <IconButton
+                        color={'cooler.text'}
+                        bg={'cooler.background'}
+                        _hover={{ color: 'cooler.secondary' }}
+                        _active={{ color: 'cooler.secondary' }}
                         size={'md'}
                         icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
                         aria-label={'Open Menu'}
