@@ -1,13 +1,30 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import Footer from '../components/footer';
 import Header from '../components/header';
 
+const theme = extendTheme({
+    colors: {
+        text: '#EB1D36',
+        background: '#F5EDDC',
+        primary: '#A2B5BB',
+        secondary: '#CFD2CF',
+        modes: {
+            dark: {
+                text: '#EEEEEE',
+                background: '#232931',
+                secondary: '#393E46',
+                primary: '#4ECCA3',
+            },
+        },
+    },
+});
+
 function MyApp({ Component, pageProps }: AppProps) {
     return (
-        <ChakraProvider>
+        <ChakraProvider theme={theme}>
             <Head>
                 <title>Ajeya Bhat</title>
                 <meta

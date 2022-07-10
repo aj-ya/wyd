@@ -9,7 +9,7 @@ import {
     Stack,
     Center,
 } from '@chakra-ui/react';
-const Links = ['Home', 'Projects', 'Who is', 'Contact'];
+const Links = ['home', 'projects', 'whois'];
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import NameTag from './nameTag';
 
@@ -41,12 +41,7 @@ const Header = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <header>
-            <Box
-                bg={'grey.900'}
-                px={4}
-                borderBottom={'1px'}
-                borderColor={'whiteAlpha.600'}
-            >
+            <Box px={4} borderBottom={'1px'} borderColor={'whiteAlpha.600'}>
                 <Flex
                     h={16}
                     justifyContent={'space-between'}
@@ -62,12 +57,12 @@ const Header = () => {
                             <NavLink key={link}>{link}</NavLink>
                         ))}
                     </HStack>
-                    <HStack>
+                    <HStack display={{ md: 'none', lg: 'none' }}>
                         <IconButton
                             size={'md'}
                             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
                             aria-label={'Open Menu'}
-                            display={{ md: 'none' }}
+                            display={{ md: 'none', lg: 'none' }}
                             onClick={isOpen ? onClose : onOpen}
                         />
                     </HStack>
