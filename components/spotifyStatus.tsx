@@ -1,4 +1,4 @@
-import { Box, Icon } from '@chakra-ui/react';
+import { Text, Icon } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { CurrentlyListeningType } from './responseTypes';
 import { FaSpotify } from 'react-icons/fa';
@@ -17,14 +17,15 @@ const SpotifyStatus = () => {
         FetchCurrentlyPlaying();
     }, []);
     return (
-        <Box fontFamily={'monospace'}>
-            <Icon
+        <Text display={['block', 'inline']} color="cooler.text">
+            {/* <Icon
                 as={FaSpotify}
                 color={listening.isPlaying ? 'green.300' : 'red.400'}
-            />{' '}
-            Currenty{' '}
-            {listening.isPlaying ? `Playing ${listening.title}` : ' Offline.'}
-        </Box>
+            />{' '} */}
+            {listening.isPlaying
+                ? `${listening.title} by ${listening.artist}`
+                : ' nothing on Spotify.'}
+        </Text>
     );
 };
 

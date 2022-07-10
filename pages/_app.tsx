@@ -1,26 +1,10 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import { Box, ChakraProvider } from '@chakra-ui/react';
 import Footer from '../components/footer';
 import Header from '../components/header';
-
-const theme = extendTheme({
-    colors: {
-        text: '#EB1D36',
-        background: '#F5EDDC',
-        primary: '#A2B5BB',
-        secondary: '#CFD2CF',
-        modes: {
-            dark: {
-                text: '#EEEEEE',
-                background: '#232931',
-                secondary: '#393E46',
-                primary: '#4ECCA3',
-            },
-        },
-    },
-});
+import theme from '../theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -34,9 +18,16 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />
-            <main>
+            <Box
+                as="main"
+                bg={'cooler.background'}
+                color="cooler.text"
+                height="calc(100vh - 125px)"
+                minHeight="calc(100vh - 125px)"
+                width="100vw"
+            >
                 <Component {...pageProps} />
-            </main>
+            </Box>
             <Footer />
         </ChakraProvider>
     );

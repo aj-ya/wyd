@@ -5,29 +5,30 @@ const displayConfig: Array<'block' | 'none'> = ['none', 'block', 'block'];
 const NameTag = () => {
     return (
         <Box
-            color={'telegram.300'}
+            color={'green.100'}
             fontFamily={'monospace'}
-            fontWeight={'500'}
             fontSize={'1em'}
             display={'inline-flex'}
-            bg={'gray.900'}
-            border={'1px'}
-            borderColor={'green'}
-            borderRadius={'5px'}
             paddingStart="0.5"
-            width={['46px', '260px', '260px']}
+            width={['60px', '300px', '300px']}
             alignItems={'start'}
             height="22px"
         >
-            <Box display={displayConfig}>[</Box>
-            <Box width={'40px'}>
-                <RollingText texts={['aj-ya', 'ajeya', 'sh4n1']} />
+            <Box fontWeight={'600'} display={'inline-flex'}>
+                <Box display={displayConfig}>[</Box>
+                <Box width={'50px'}>
+                    <RollingText texts={['aj-ya', 'ajeya', 'sh4n1']} />
+                </Box>
+                <Box display={displayConfig}>@dev~]$</Box>
             </Box>
-            <Box display={displayConfig}>@dev~]$</Box>
             <Box display={displayConfig}>
                 <TypewriterComponent
                     options={{
-                        strings: [`echo "h3ll0, w0rld"`],
+                        strings: [
+                            `echo "h3ll0, w0rld"`,
+                            'whois ajeya',
+                            'curl aj-ya.me',
+                        ],
                         autoStart: true,
                         loop: true,
                         delay: 200,
