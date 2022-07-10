@@ -1,9 +1,7 @@
-import { ReactNode } from 'react';
 import {
     Box,
     Flex,
     HStack,
-    Link,
     IconButton,
     useDisclosure,
     Stack,
@@ -11,32 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import NameTag from './nameTag';
-import NextLink from 'next/link';
-
-const NavLink = ({ linkObj }: { linkObj: { name: string; to: string } }) => (
-    <NextLink href={linkObj.to} passHref>
-        <Link
-            px={2}
-            py={1}
-            rounded={'md'}
-            _hover={{
-                textDecoration: 'none',
-                fontWeight: 'bold',
-                // bg: useColorModeValue('gray.200', 'gray.700'),
-                transform: 'scale(1.05)',
-            }}
-            _active={{
-                textDecoration: 'none',
-                fontWeight: 'bold',
-                // bg: useColorModeValue('gray.200', 'gray.700'),
-                transform: 'scale(1.05)',
-            }}
-            transition={'0.2 ease-in-out'}
-        >
-            {linkObj.name}
-        </Link>
-    </NextLink>
-);
+import NavLink from './navLink';
 
 const Header = () => {
     const Links = [
