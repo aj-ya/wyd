@@ -1,0 +1,31 @@
+[
+    {
+        "title": "Split",
+        "desc": "Split is a mobile-first progressive web application aimed to help divide and track expenses among peers. Built using NextJS and MongoDB, and hosted on vercel.",
+        "repo": "https://github.com/aj-ya/split",
+        "deployment": "https://split-ecru.vercel.app",
+        "tags": ["NextJs", "Neumorphism", "MongoDB", "React", "TypeScript"]
+    },
+    {
+        "title": "Spacegram",
+        "desc": "A gallery of space pictures fetched from the NASA Astronomy Picture of the Day. Boasts search,like & share features.",
+        "repo": "https://github.com/aj-ya/spacegram",
+        "deployment": "https://spacegram-kohl.vercel.app/",
+        "tags": [
+            "NextJs",
+            "React",
+            "Chakra-UI",
+            "TypeScript",
+            "API",
+            "REST",
+            "DailyDev"
+        ]
+    },
+    {
+        "title": "The Rick List",
+        "desc": "A database of Ricks across universes. Maintained by the Council of Ricks!",
+        "repo": "https://github.com/aj-ya/TheRickList",
+        "deployment": "https://aj-ya.github.io/TheRickList",
+        "tags": ["React", "API", "GrapgQL", "DailyDev", "Javascript"]
+    }
+]
