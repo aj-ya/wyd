@@ -50,7 +50,7 @@ const Home: NextPage = () => {
                     </NextLink>
                 </Text>
                 <Text>
-                    working as Frontend Intern @{' '}
+                    working as SDE Intern @{' '}
                     <NextLink
                         href="https://outpost.run"
                         target={'_blank'}

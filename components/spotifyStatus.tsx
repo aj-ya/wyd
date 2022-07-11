@@ -24,7 +24,7 @@ const SpotifyStatus = () => {
             />{' '} */}
             {listening.isPlaying
                 ? `${listening.title} by ${listening.artist}`
-                : ' nothing on Spotify.'}
+                : 'nothing on Spotify.'}
         </Text>
     );
 };
