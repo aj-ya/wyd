@@ -1,23 +1,21 @@
 import {
     Avatar,
     Box,
+    Center,
+    Code,
     Flex,
     HStack,
-    TagRightIcon,
     Text,
     VStack,
 } from '@chakra-ui/react';
 import { NextPage } from 'next';
-import NextLink from 'next/link';
-import { Link } from '@chakra-ui/react';
 import NavLink from '../components/navLink';
 import { ArrowRightIcon } from '@chakra-ui/icons';
 const WhoIs: NextPage = () => {
     return (
         <Flex
             width="100%"
-            height="100%"
-            py={4}
+            height="calc(100vh - 125px)"
             alignItems={'center'}
             justifyContent={'center'}
             fontFamily={'monospace'}

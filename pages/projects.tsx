@@ -1,27 +1,32 @@
-import { Box, Flex, Accordion } from '@chakra-ui/react';
+import { Box, Flex, Accordion, Text } from '@chakra-ui/react';
 import { NextPage } from 'next';
-import Project from '../components/accordianItem';
+import Project from '../components/projectCard';
 import ProjectData from '../lib/projects.json';
 const Projects: NextPage = () => {
     return (
         <Flex
-            width="100%"
             height="100%"
+            width="100%"
+            minHeight={'calc(100vh - 125px)'}
             alignItems={'center'}
             justifyContent={'center'}
             color={'cooler.secondaryText'}
             fontFamily={'monospace'}
             fontSize={['1em', '1.1em', '1.2em']}
+            direction="column"
         >
-            <Accordion
-                defaultIndex={[0]}
-                allowMultiple
-                width={['70%', '60%', '50%']}
+            <Text
+                fontSize={['xl', '2xl', '3xl']}
+                pb={4}
+                fontWeight={'extrabold'}
             >
+                My Past Projects
+            </Text>
+            <Flex dir={'row'} gap={6} justifyContent={'center'} wrap={'wrap'}>
                 {ProjectData.map((project) => (
                     <Project key={project.title} projectDetails={project} />
                 ))}
-            </Accordion>
+            </Flex>
         </Flex>
     );
 };

@@ -66,7 +66,10 @@ const Header = () => {
                     <Stack as={'nav'} spacing={4}>
                         {Links.map((link) => (
                             <Center key={link.to}>
-                                <NavLink linkObj={link}></NavLink>
+                                <NavLink
+                                    linkObj={link}
+                                    onClick={isOpen ? onClose : onOpen}
+                                ></NavLink>
                             </Center>
                         ))}
                     </Stack>

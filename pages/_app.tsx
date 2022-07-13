@@ -22,7 +22,6 @@ function MyApp({ Component, pageProps }: AppProps) {
                 as="main"
                 bg={'cooler.background'}
                 color="cooler.text"
-                height="calc(100vh - 125px)"
                 minHeight="calc(100vh - 125px)"
                 width="100vw"
             >

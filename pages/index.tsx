@@ -8,10 +8,10 @@ const Home: NextPage = () => {
     return (
         <Flex
             width={'100%'}
-            height={'100%'}
+            height={'calc(100vh - 125px)'}
             justifyContent={'center'}
             fontSize={['1em', '1.5em', '2em']}
-            px={3}
+            px={4}
             alignItems={'center'}
         >
             <VStack
