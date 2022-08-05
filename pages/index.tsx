@@ -33,44 +33,46 @@ const Home: NextPage = () => {
                     <abbr title="Free and Open Source Softwares">FOSS</abbr>{' '}
                     Contributer,
                 </Text>
-                <Text>Currently I&apos;m,</Text>
-                <Text>
-                    persuing B.Engg @{' '}
-                    <NextLink href="https://kletech.ac.in" passHref>
-                        <Link
-                            textDecoration={'underline'}
-                            textDecorationStyle={'dotted'}
+                <Text>Currently I&apos;m</Text>
+                <VStack alignItems={'start'}>
+                    <Text>
+                        persuing B.Engg @{' '}
+                        <NextLink href="https://kletech.ac.in" passHref>
+                            <Link
+                                textDecoration={'underline'}
+                                textDecorationStyle={'dotted'}
+                                target={'_blank'}
+                                display={['block', 'inline']}
+                                color="cooler.text"
+                            >
+                                KLE Technological University{' '}
+                                <ExternalLinkIcon mx="2px" />
+                            </Link>
+                        </NextLink>
+                    </Text>
+                    <Text>
+                        working as SDE Intern @{' '}
+                        <NextLink
+                            href="https://outpost.run"
                             target={'_blank'}
-                            display={['block', 'inline']}
-                            color="cooler.text"
+                            passHref
                         >
-                            KLE Technological University{' '}
-                            <ExternalLinkIcon mx="2px" />
-                        </Link>
-                    </NextLink>
-                </Text>
-                <Text>
-                    working as SDE Intern @{' '}
-                    <NextLink
-                        href="https://outpost.run"
-                        target={'_blank'}
-                        passHref
-                    >
-                        <Link
-                            textDecoration={'underline'}
-                            textDecorationStyle={'dotted'}
-                            target={'_blank'}
-                            display={['block', 'inline']}
-                            color="cooler.text"
-                        >
-                            Outpost <ExternalLinkIcon mx="2px" />
-                        </Link>
-                    </NextLink>
-                </Text>
-                <Text as="div">
-                    Listening to&nbsp;
-                    <SpotifyStatus />
-                </Text>
+                            <Link
+                                textDecoration={'underline'}
+                                textDecorationStyle={'dotted'}
+                                target={'_blank'}
+                                display={['block', 'inline']}
+                                color="cooler.text"
+                            >
+                                Outpost <ExternalLinkIcon mx="2px" />
+                            </Link>
+                        </NextLink>
+                    </Text>
+                    <Text as="div">
+                        Listening to&nbsp;
+                        <SpotifyStatus />
+                    </Text>
+                </VStack>
             </VStack>
         </Flex>
     );

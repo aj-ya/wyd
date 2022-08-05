@@ -18,3 +18,13 @@ a {
     box-sizing: border-box;
     margin: 0;
 }
+
+::-moz-selection {
+    color: #c6f6d5;
+    background: #373d42;
+}
+
+::selection {
+    color: #c6f6d5;
+    background: #373d42;
+}

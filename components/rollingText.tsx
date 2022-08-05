@@ -1,6 +1,6 @@
-import { Box, Center } from '@chakra-ui/react';
+import { Box, Center, Text } from '@chakra-ui/react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
 const variants = {
     enter: {
@@ -17,11 +17,17 @@ const variants = {
     },
 };
 
-const Slideshow = ({ text = 'aj-ya' }: { text: string }) => {
+const Slideshow = ({
+    text = <Text>aj-ya</Text>,
+    key,
+}: {
+    text: ReactNode;
+    key: string | number;
+}) => {
     return (
         <AnimatePresence>
             <motion.div
-                key={text}
+                key={key}
                 variants={variants}
                 initial="enter"
                 animate="center"
@@ -36,7 +42,11 @@ const Slideshow = ({ text = 'aj-ya' }: { text: string }) => {
     );
 };
 
-const RollingText = ({ texts = ['aj-ya'] }: { texts: string[] }) => {
+const RollingText = ({
+    texts = [<Box key={'something'}>aj-ya</Box>],
+}: {
+    texts: ReactNode[];
+}) => {
     const [state, setState] = useState<number>(0);
     useEffect(() => {
         setTimeout(() => {
@@ -44,6 +54,6 @@ const RollingText = ({ texts = ['aj-ya'] }: { texts: string[] }) => {
         }, 4000);
     }, [state, texts.length]);
 
-    return <Slideshow text={texts[state]} />;
+    return <Slideshow text={texts[state]} key={state} />;
 };
 export default RollingText;

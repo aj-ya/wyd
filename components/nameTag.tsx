@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import TypewriterComponent from 'typewriter-effect';
 import RollingText from './rollingText';
 const displayConfig: Array<'block' | 'none'> = ['none', 'block', 'block'];
@@ -15,7 +15,13 @@ const NameTag = () => {
             <Box fontWeight={'600'} display={'inline-flex'}>
                 <Box display={displayConfig}>[</Box>
                 <Box width={'50px'}>
-                    <RollingText texts={['aj-ya', 'ajeya', 'sh4n1']} />
+                    <RollingText
+                        texts={[
+                            <Text key={'aj-ya'}>aj-ya</Text>,
+                            <Text key={'ajeya'}>ajeya</Text>,
+                            <Text key={'sh4n1'}>sh4n1</Text>,
+                        ]}
+                    />
                 </Box>
                 <Box display={displayConfig}>@dev~]$</Box>
             </Box>
