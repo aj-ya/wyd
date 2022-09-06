@@ -18,7 +18,7 @@ const Footer = () => {
         >
             <HStack gap={'3'}>
                 <NextLink
-                    href="mailto:ajeyabhat.off@gmail.com"
+                    href="https://github.com/aj-ya "
                     target={'_blank'}
                     passHref
                 >
@@ -27,7 +27,7 @@ const Footer = () => {
                     </Link>
                 </NextLink>
                 <NextLink
-                    href="https://github.com/aj-ya"
+                    href="mailto:ajeyabhat.off@gmail.com"
                     target={'_blank'}
                     passHref
                 >
