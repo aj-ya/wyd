@@ -3,6 +3,7 @@
 # Author : Ajeya Bhat
 # Last Modified : 2022-10-14T07:02:04+0000
 # @args @param1 hostname @param2 static_ip_addr
+
 #hostname
 sudo hostnamectl set-hostname "$1"
 
