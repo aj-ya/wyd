@@ -39,5 +39,5 @@ sudo netplan apply --debug
 sudo apt install -y curl
 sudo touch ~/k8s_installation_ubuntu_22.sh
 sudo chmod +x ~/k8s_installation_ubuntu_22.sh
-curl -OL https://aj-ya.me/k8s_installation.sh >> ~/k8s_installation_ubuntu_22.sh
+curl -OL https://aj-ya.me/k8s_installation.txt >> ~/k8s_installation_ubuntu_22.sh
 echo "continue to installtion by running ~/k8s_installation_ubuntu_22.sh "
