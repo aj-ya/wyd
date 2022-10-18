@@ -22,8 +22,8 @@ sudo ufw disable
 sudo apt install -y curl
 sudo touch ~/k8s.sh
 sudo chmod +x ~/k8s.sh
-wget https://aj-ya.me/k8s_installation.txt
-cp ./k8s_installation.txt ~/k8s.sh
+wget https://aj-ya.me/k8s_ubuntu22.txt
+cp ./k8s_ubuntu22.txt ~/k8s.sh
 echo "continue to installtion by running ~/k8s.sh"
 
 #network config
